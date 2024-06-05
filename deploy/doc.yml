@@ -1,7 +1,7 @@
 version: '3'
 
 volumes:
-  ark-data: /srv/dev-disk-by-uuid-ea4ef1ad-63a0-493f-b10d-aa6b5b718b3b/appdata/Ark/data
+  ark-data:
 
 services:
   server:
@@ -33,11 +33,12 @@ services:
       - DISABLE_BATTLEYE=true
       - GAME_MOD_IDS=1591643730,2376943369,1404697612,731604991,895711211,1428596566,1609138312,2121213202,902616446,761535755,893834064
       - ARKCLUSTERID=eyeswatch1802
-      - SERVERPORT=27015
-      - RCONPORT=27020
-      - STEAMPORT=7778
-    ports:
-      # Port for connections from ARK game client
+      - GAME_CLIENT_PORT=7777 
+      - UDP_SOCKET_PORT=7778  
+      - RCON_PORT=27020 
+      - SERVER_LIST_PORT=27015
+          ports:
+            # Port for connections from ARK game client
       - "7777:7777/udp"
       # Raw UDP socket port (always Game client port +1
       - "7778:7778/udp"
