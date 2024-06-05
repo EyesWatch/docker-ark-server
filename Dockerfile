@@ -24,9 +24,13 @@ ENV         IMAGE_VERSION="${IMAGE_VERSION}" \
             RCON_PORT="27020" \
             SERVER_LIST_PORT="27015" \
             STEAM_HOME="/home/${USER}" \
+            SERVERPORT=27015 \
+            STEAMPORT=7778 \
+            RCONPORT=32330 \
+            ENABLERCON=true \
             STEAM_USER="${USER}" \
             STEAM_LOGIN="anonymous"\
-            ARK_CLUSTER_ID="eyeswatch1802" 
+            ARKCLUSTERID="eyeswatch1802" 
 
 ENV         ARK_TOOLS_DIR="${ARK_SERVER_VOLUME}/arkmanager"
 
